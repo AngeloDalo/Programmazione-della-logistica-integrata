@@ -36,7 +36,7 @@ class HomeController extends Controller
 
     public function create()
     {
-        return view('guest.welcome');
+        return view('admin.underwears.create');
     }
 }
 
