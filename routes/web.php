@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,7 @@ Route::middleware('auth')
     ->prefix('admin') //uri
     ->group(function () {
         Route::get('/', 'HomeController@index')->name('home');
-        Route::resource('underwears', 'UnderwearController');
+        Route::resource('underwears', 'HomeController');
     });
 
 Route::get('{any?}', function ($name = null) {

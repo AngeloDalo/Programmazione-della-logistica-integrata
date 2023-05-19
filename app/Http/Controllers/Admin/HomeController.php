@@ -30,8 +30,13 @@ class HomeController extends Controller
         if (Auth::user()->role == 1) {
             return view('admin.underwears.index', ['underwears' => $underwears]);
         } else {
-            return view('guest.apartments.index');
+            return view('guest.welcome');
         }
+    }
+
+    public function create()
+    {
+        return view('guest.welcome');
     }
 }
 

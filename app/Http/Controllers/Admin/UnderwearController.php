@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Underwear;
-use App\User;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Underwear;
+use Illuminate\Support\Facades\Auth;
 
 class UnderwearController extends Controller
 {
@@ -21,7 +21,7 @@ class UnderwearController extends Controller
         if (Auth::user()->role == 1) {
             return view('admin.underwears.index', ['underwears' => $underwears]);
         } else {
-            return view('guest.apartments.index');
+            return view('guest.underwears.index');
         }
     }
 
