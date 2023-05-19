@@ -1,8 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Underwear;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $underwears = Underwear::all();
+        if (Auth::user()->role == 1) {
+            return view('admin.underwears.index', ['underwears' => $underwears]);
+        } else {
+            return view('guest.apartments.index');
+        }
     }
 }
+

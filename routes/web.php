@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/admin', function () {
+    return view('admin.underwears.index');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Auth::routes();
+Route::middleware('auth')
+    ->namespace('Admin')
+    ->name('admin.') //name
+    ->prefix('admin') //uri
+    ->group(function () {
+        Route::get('/', 'HomeController@index')->name('home');
+        Route::resource('underwears', 'UnderwearController');
+    });
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('{any?}', function ($name = null) {
+    return view('guest.welcome');
+})->where('any', '.*');
+
 
