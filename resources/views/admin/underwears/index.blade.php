@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="overflow-x-auto">
+    <div class="overflow-x-auto max-w-5xl mx-5">
         <table class="table-auto w-full">
             <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
                 <tr>
