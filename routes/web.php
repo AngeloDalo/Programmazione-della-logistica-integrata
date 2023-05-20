@@ -43,5 +43,3 @@ Route::get('{any?}', function ($name = null) {
     $underwears = Underwear::all();
     return view('guest.welcome', ['underwears' => $underwears]);
 })->where('any', '.*');
-
-

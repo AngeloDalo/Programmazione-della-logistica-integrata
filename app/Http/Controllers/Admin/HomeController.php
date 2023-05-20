@@ -148,7 +148,7 @@ class HomeController extends Controller
         return redirect()->route('admin.underwears.index');
     }
 
-        /**
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -172,4 +172,3 @@ class HomeController extends Controller
         //
     }
 }
-
