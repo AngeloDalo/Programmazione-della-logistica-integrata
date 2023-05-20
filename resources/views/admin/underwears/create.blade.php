@@ -79,13 +79,14 @@
 
     <script>
         function validationForm() {
-            let title = document.getElementById('name').value;
+            let name = document.getElementById('name').value;
             let error1 = document.getElementById('demo1');
             let price = document.getElementById('price').value;
             let error2 = document.getElementById('demo2');
-            let rooms = document.getElementById('quantity').value;
+            let quantity = document.getElementById('quantity').value;
             let error3 = document.getElementById('demo3');
-            let beds = document.getElementById('size').value;
+            let size = document.getElementById('size').value;
+            let error4 = document.getElementById('demo4');
 
             let message = "";
             let error = 0;

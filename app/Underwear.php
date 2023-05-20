@@ -12,7 +12,7 @@ class Underwear extends Model
         'price',
         'quantity',
         'size',
-        'imagine',
+        'image',
         'visible',
         'slug',
         'created_at',
