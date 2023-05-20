@@ -11,29 +11,79 @@
     <style>
         input[type='number']::-webkit-inner-spin-button,
         input[type='number']::-webkit-outer-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
+            -webkit-appearance: none;
+            margin: 0;
         }
 
         .custom-number-input input:focus {
-          outline: none !important;
+            outline: none !important;
         }
 
         .custom-number-input button:focus {
-          outline: none !important;
+            outline: none !important;
         }
-      </style>
-      <style>
+    </style>
+    <style>
+        .radio input~label {
+            background-color: rgb(233, 225, 225);
+            color: rgb(158, 146, 146);
+        }
 
-        .radio input ~ label {
-          background-color: rgb(233, 225, 225);
-          color: rgb(158, 146, 146);
+        .radio input:checked~label {
+            background-color: rgb(70, 230, 22);
+            color: white;
         }
-        .radio input:checked ~ label {
-          background-color: rgb(70, 230, 22);
-          color: white;
+    </style>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="./assets/styles/styles.css" /> -->
+    <script defer src="https://unpkg.com/alpinejs@3.2.2/dist/cdn.min.js"></script>
+    <style>
+        .form-select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.5rem center;
+            background-size: 1.5em 1.5em;
+            -webkit-tap-highlight-color: transparent;
         }
-        </style>
+
+        .submit-button:disabled {
+            cursor: not-allowed;
+            background-color: #D1D5DB;
+            color: #111827;
+        }
+
+        .submit-button:disabled:hover {
+            background-color: #9CA3AF;
+        }
+
+        .credit-card {
+            max-width: 420px;
+            margin-top: 3rem;
+        }
+
+        @media only screen and (max-width: 420px) {
+            .credit-card .front {
+                font-size: 100%;
+                padding: 0 2rem;
+                bottom: 2rem !important;
+            }
+
+            .credit-card .front .number {
+                margin-bottom: 0.5rem !important;
+            }
+        }
+    </style>
+
+    <style>
+        @layer utilities {
+
+            input[type="number"]::-webkit-inner-spin-button,
+            input[type="number"]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -104,39 +154,101 @@
 
 <script>
     function decrement(e) {
-      const btn = e.target.parentNode.parentElement.querySelector(
-        'button[data-action="decrement"]'
-      );
-      const target = btn.nextElementSibling;
-      let value = Number(target.value);
-      value--;
-      target.value = value;
+        const btn = e.target.parentNode.parentElement.querySelector(
+            'button[data-action="decrement"]'
+        );
+        const target = btn.nextElementSibling;
+        let value = Number(target.value);
+        value--;
+        target.value = value;
     }
 
     function increment(e) {
-      const btn = e.target.parentNode.parentElement.querySelector(
-        'button[data-action="decrement"]'
-      );
-      const target = btn.nextElementSibling;
-      let value = Number(target.value);
-      value++;
-      target.value = value;
+        const btn = e.target.parentNode.parentElement.querySelector(
+            'button[data-action="decrement"]'
+        );
+        const target = btn.nextElementSibling;
+        let value = Number(target.value);
+        value++;
+        target.value = value;
     }
 
     const decrementButtons = document.querySelectorAll(
-      `button[data-action="decrement"]`
+        `button[data-action="decrement"]`
     );
 
     const incrementButtons = document.querySelectorAll(
-      `button[data-action="increment"]`
+        `button[data-action="increment"]`
     );
 
     decrementButtons.forEach(btn => {
-      btn.addEventListener("click", decrement);
+        btn.addEventListener("click", decrement);
     });
 
     incrementButtons.forEach(btn => {
-      btn.addEventListener("click", increment);
+        btn.addEventListener("click", increment);
     });
-  </script>
+
+    document.addEventListener("alpine:init", () => {
+        Alpine.data("creditCard", () => ({
+            init() {
+                console.log('Component mounted');
+            },
+            format() {
+                if (this.cardNumber.length > 18) {
+                    return;
+                }
+                this.cardNumber = this.cardNumber.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
+            },
+            get isValid() {
+                if (this.cardholder.length < 5) {
+                    return false;
+                }
+                if (this.cardNumber === '') {
+                    return false;
+                }
+                if (this.expired.month === '' && this.expired.year === '') {
+                    return false;
+                }
+                if (this.securityCode.length !== 3) {
+                    return false;
+                }
+                return true;
+            },
+            onSubmit() {
+                alert(`You did it ${this.cardholder}.`);
+            },
+            cardholder: '',
+            cardNumber: '',
+            expired: {
+                month: '',
+                year: '',
+            },
+            securityCode: '',
+            card: 'front',
+        }));
+    });
+
+    var quantity = 1;
+    console.log(quantity);
+
+    var button1 = document.getElementById("decrement");
+    var button2 = document.getElementById("increment");
+    var price = document.getElementById("price").value;
+    var total = document.getElementById("total").innerHTML = (price*quantity + 4.99).toFixed(2) + "€";
+    var subtotal = document.getElementById("subtotal").innerHTML = (price*quantity).toFixed(2) + "€";
+
+    button1.addEventListener('click', function() {
+        quantity = quantity - 1;
+        document.getElementById("total").innerHTML = (price*quantity + 4.99).toFixed(2) + "€";
+        document.getElementById("subtotal").innerHTML = (price*quantity).toFixed(2) + "€";
+    });
+    button2.addEventListener('click', function() {
+        quantity = quantity + 1;
+        console.log(quantity);
+        document.getElementById("total").innerHTML = (price*quantity + 4.99).toFixed(2) + "€";
+        document.getElementById("subtotal").innerHTML = (price*quantity).toFixed(2) + "€";
+    });
+</script>
+
 </html>
