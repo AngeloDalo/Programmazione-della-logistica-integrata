@@ -8,6 +8,32 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <title>MyUnderwear</title>
+    <style>
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number']::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        .custom-number-input input:focus {
+          outline: none !important;
+        }
+
+        .custom-number-input button:focus {
+          outline: none !important;
+        }
+      </style>
+      <style>
+
+        .radio input ~ label {
+          background-color: rgb(233, 225, 225);
+          color: rgb(158, 146, 146);
+        }
+        .radio input:checked ~ label {
+          background-color: rgb(70, 230, 22);
+          color: white;
+        }
+        </style>
 </head>
 
 <body>
@@ -43,7 +69,8 @@
                                     href="{{ route('register') }}">{{ __('Register') }}</a>
                             @endif
                         @else
-                            <span class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">{{ Auth::user()->name }}</span>
+                            <span
+                                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">{{ Auth::user()->name }}</span>
 
                             <a href="{{ route('logout') }}"
                                 class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
@@ -75,4 +102,41 @@
     </section>
 </body>
 
+<script>
+    function decrement(e) {
+      const btn = e.target.parentNode.parentElement.querySelector(
+        'button[data-action="decrement"]'
+      );
+      const target = btn.nextElementSibling;
+      let value = Number(target.value);
+      value--;
+      target.value = value;
+    }
+
+    function increment(e) {
+      const btn = e.target.parentNode.parentElement.querySelector(
+        'button[data-action="decrement"]'
+      );
+      const target = btn.nextElementSibling;
+      let value = Number(target.value);
+      value++;
+      target.value = value;
+    }
+
+    const decrementButtons = document.querySelectorAll(
+      `button[data-action="decrement"]`
+    );
+
+    const incrementButtons = document.querySelectorAll(
+      `button[data-action="increment"]`
+    );
+
+    decrementButtons.forEach(btn => {
+      btn.addEventListener("click", decrement);
+    });
+
+    incrementButtons.forEach(btn => {
+      btn.addEventListener("click", increment);
+    });
+  </script>
 </html>

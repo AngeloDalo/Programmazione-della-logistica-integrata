@@ -31,7 +31,7 @@ class HomeController extends Controller
         if (Auth::user()->role == 1) {
             return view('admin.underwears.index', ['underwears' => $underwears]);
         } else {
-            return view('guest.welcome');
+            return view('guest.welcome', ['underwears' => $underwears]);
         }
     }
 
@@ -83,7 +83,7 @@ class HomeController extends Controller
      */
     public function show(Underwear $underwear)
     {
-        //
+        return view('admin.underwears.show', ['underwear' => $underwear]);
     }
 
     /**
@@ -97,7 +97,8 @@ class HomeController extends Controller
         if (Auth::user()->role == 1) {
             return view('admin.underwears.edit', ['underwear' => $underwear]);
         } else {
-            return view('guest.welcome');
+            $underwears = Underwear::all();
+            return view('guest.welcome', ['underwears' => $underwears]);
         }
     }
 
@@ -144,6 +145,19 @@ class HomeController extends Controller
         }
         $underwear->update();
 
+        return redirect()->route('admin.underwears.index');
+    }
+
+        /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function shop(Request $request)
+    {
+        $data = $request->all();
+        dd($data);
         return redirect()->route('admin.underwears.index');
     }
 

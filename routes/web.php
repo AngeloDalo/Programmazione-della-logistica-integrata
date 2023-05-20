@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Underwear;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,8 @@ Route::middleware('auth')
     });
 
 Route::get('{any?}', function ($name = null) {
-    return view('guest.welcome');
+    $underwears = Underwear::all();
+    return view('guest.welcome', ['underwears' => $underwears]);
 })->where('any', '.*');
 
 

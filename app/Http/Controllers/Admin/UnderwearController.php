@@ -21,7 +21,7 @@ class UnderwearController extends Controller
         if (Auth::user()->role == 1) {
             return view('admin.underwears.index', ['underwears' => $underwears]);
         } else {
-            return view('guest.underwears.index');
+            return view('guest.welcome', ['underwears' => $underwears]);
         }
     }
 

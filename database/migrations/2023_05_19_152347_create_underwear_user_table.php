@@ -24,6 +24,8 @@ class CreateUnderwearUserTable extends Migration
                 ->references('id')
                 ->on('users');
 
+            $table->integer('quantity');
+            $table->string('size');
             $table->primary(['underwear_id', 'user_id']);
             $table->timestamps();
         });
