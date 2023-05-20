@@ -8,6 +8,17 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <title>MyUnderwear</title>
+    <!-- Gogole Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        section {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
     <style>
         input[type='number']::-webkit-inner-spin-button,
         input[type='number']::-webkit-outer-spin-button {
@@ -88,8 +99,8 @@
 
 <body>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <div class="">
-        <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
+    <div class="bg-transparent">
+        <div class="antialiased bg-trasparent dark-mode:bg-gray-900">
             <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
                 <div x-data="{ open: true }"
                     class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
@@ -113,12 +124,16 @@
                         class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
                         @guest
                             <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                href="{{ url('/guest/landing') }}">Chi siamo</a>
+                            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                                 href="{{ route('login') }}">{{ __('Login') }}</a>
                             @if (Route::has('register'))
                                 <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                                     href="{{ route('register') }}">{{ __('Register') }}</a>
                             @endif
                         @else
+                            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                href="{{ url('/guest/landing') }}">Chi siamo</a>
                             <span
                                 class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">{{ Auth::user()->name }}</span>
 
@@ -135,8 +150,8 @@
             </div>
         </div>
     </div>
-    <section class="antialiased bg-gray-100 text-gray-600">
-        <div class="flex flex-col justify-center h-full">
+    <section class="antialiased bg-trasparent text-gray-600">
+        <div class="flex flex-col justify-center h-full bg-transparent">
             <!-- Table -->
             <div class="w-full max-w-5xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
                 <header class="px-5 py-4 border-b border-gray-100">
@@ -235,19 +250,19 @@
     var button1 = document.getElementById("decrement");
     var button2 = document.getElementById("increment");
     var price = document.getElementById("price").value;
-    var total = document.getElementById("total").innerHTML = (price*quantity + 4.99).toFixed(2) + "€";
-    var subtotal = document.getElementById("subtotal").innerHTML = (price*quantity).toFixed(2) + "€";
+    var total = document.getElementById("total").innerHTML = (price * quantity + 4.99).toFixed(2) + "€";
+    var subtotal = document.getElementById("subtotal").innerHTML = (price * quantity).toFixed(2) + "€";
 
     button1.addEventListener('click', function() {
         quantity = quantity - 1;
-        document.getElementById("total").innerHTML = (price*quantity + 4.99).toFixed(2) + "€";
-        document.getElementById("subtotal").innerHTML = (price*quantity).toFixed(2) + "€";
+        document.getElementById("total").innerHTML = (price * quantity + 4.99).toFixed(2) + "€";
+        document.getElementById("subtotal").innerHTML = (price * quantity).toFixed(2) + "€";
     });
     button2.addEventListener('click', function() {
         quantity = quantity + 1;
         console.log(quantity);
-        document.getElementById("total").innerHTML = (price*quantity + 4.99).toFixed(2) + "€";
-        document.getElementById("subtotal").innerHTML = (price*quantity).toFixed(2) + "€";
+        document.getElementById("total").innerHTML = (price * quantity + 4.99).toFixed(2) + "€";
+        document.getElementById("subtotal").innerHTML = (price * quantity).toFixed(2) + "€";
     });
 </script>
 

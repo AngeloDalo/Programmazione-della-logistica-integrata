@@ -20,6 +20,14 @@ Route::get('/admin', function () {
     return view('admin.underwears.index');
 });
 
+Route::get('/guest/checkout', function () {
+    return view('guest.checkout');
+});
+
+Route::get('/guest/landing', function () {
+    return view('guest.landing');
+});
+
 Auth::routes();
 
 Route::middleware('auth')
