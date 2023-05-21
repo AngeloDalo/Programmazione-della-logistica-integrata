@@ -28,6 +28,14 @@
                                     <span class="m-auto text-2xl font-thin">+</span>
                                 </button>
                             </div>
+                            <select id="size"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>Choose a size</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
                             <div class="flex items-center space-x-4">
                                 <input type="button" id="price" value="{{ $underwear->price }}" />
                                 <span>€</span>
@@ -44,19 +52,22 @@
                 </div>
                 <div class="flex justify-between">
                     <p class="text-gray-700">Shipping</p>
-                    <p class="text-gray-700">$4.99</p>
+                    <p class="text-gray-700">4.99€</p>
                 </div>
                 <hr class="my-4" />
-                <div class="flex justify-between" id="total">
-                    <p class="text-lg font-bold">Total</p>
-                    <div class="">
-                        <p class="mb-1 text-lg font-bold"></p>
-                        <p class="text-sm text-gray-700">including VAT</p>
+                <div class="flex justify-between mb-2">
+                    <span class="text-lg font-bold">Total</span>
+                    <div class="flex justify-between" id="total">
+                        <div class="">
+                            <p class="mb-1 text-lg font-bold"></p>
+                        </div>
                     </div>
                 </div>
-                <a href="{{ url('/guest/checkout') }}"
-                    class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check
+                <div class="flex justify-end">
+                    <a href="{{ url('/guest/checkout') }}"
+                    class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600 text-center">Check
                     out</a>
+                </div>
             </div>
         </div>
     </div>
