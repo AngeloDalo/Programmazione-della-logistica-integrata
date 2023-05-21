@@ -154,7 +154,7 @@
                     </div>
                 </main>
                 <footer class="mt-6 p-4">
-                    <a href="{{ url('/') }}"
+                    <a href="{{ url('/guest/thanks') }}"
                         class="submit-button px-4 py-3 rounded-full bg-blue-300 text-blue-900 focus:ring focus:outline-none w-full text-xl font-semibold transition-colors"
                         x-bind:disabled="!isValid">
                         Pay now

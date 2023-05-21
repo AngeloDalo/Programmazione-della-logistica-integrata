@@ -28,6 +28,10 @@ Route::get('/guest/landing', function () {
     return view('guest.landing');
 });
 
+Route::get('/guest/thanks', function () {
+    return view('guest.thanks');
+});
+
 Auth::routes();
 
 Route::middleware('auth')
