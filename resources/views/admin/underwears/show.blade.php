@@ -65,7 +65,7 @@
                 </div>
                 <div class="flex justify-end">
                     <a href="{{ url('/guest/checkout') }}"
-                    class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600 text-center">Check
+                    class="special-button" id="special-button">Check
                     out</a>
                 </div>
             </div>
