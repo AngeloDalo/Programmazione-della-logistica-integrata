@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="flex bg-transparent justify-center">
-        <div class="flex h-screen bg-trasparent">
+    <div class="flex justify-center pb-5">
+        <div class="flex h-screen">
             <div class="m-auto">
                 <div>
-                    <div class="mt-5 mx-5 bg-white rounded-lg shadow">
+                    <div class="mt-5 mx-5 rounded-lg shadow">
                         <div class="flex">
                             <div class="flex-1 py-5 pl-5 overflow-hidden">
                                 <svg class="inline align-text-top" width="21" height="20.5"
@@ -19,7 +19,7 @@
                                         <circle cx="7.04807" cy="6.97256" r="2.5" id="svg_3"></circle>
                                     </g>
                                 </svg>
-                                <h1 class="inline text-2xl font-semibold leading-none">Receiver</h1>
+                                <h1 class="inline text-2xl font-semibold leading-none text-white">Receiver</h1>
                             </div>
                             <div class="flex-none pt-2.5 pr-2.5 pl-1"></div>
                         </div>
@@ -155,7 +155,7 @@
                 </main>
                 <footer class="mt-6 p-4">
                     <a href="{{ url('/guest/thanks') }}"
-                        class="submit-button px-4 py-3 rounded-full bg-blue-300 text-blue-900 focus:ring focus:outline-none w-full text-xl font-semibold transition-colors"
+                        class="special-button"
                         x-bind:disabled="!isValid">
                         Pay now
                     </a>

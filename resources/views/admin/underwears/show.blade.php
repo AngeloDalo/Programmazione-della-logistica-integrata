@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="h-screen bg-gray-100 pt-20">
-        <h1 class="mb-10 text-center text-2xl font-bold">Cart Items</h1>
+    <div class="h-screen pt-20">
+        <h1 class="mb-10 text-center text-2xl font-bold text-white uppercase">Cart Items</h1>
         <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
             <div class="rounded-lg md:w-2/3">
                 <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
@@ -18,13 +18,13 @@
                                 <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold">Quantity
                                 </label>
                                 <button data-action="decrement" id="decrement"
-                                    class=" cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                                    class="special-button">
                                     <span class="m-auto text-2xl font-thin">−</span>
                                 </button>
-                                <input type="number" class="h-8 w-8 border bg-white text-center text-xs outline-none"
+                                <input type="number" class="mt-5 h-13 w-8 border bg-white text-center text-xs outline-none"
                                     id="value-quentity" name="custom-input-number" value="1" min="1">
                                 <button data-action="increment" id="increment"
-                                    class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                                    class="special-button">
                                     <span class="m-auto text-2xl font-thin">+</span>
                                 </button>
                             </div>

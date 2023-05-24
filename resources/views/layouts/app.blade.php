@@ -58,7 +58,7 @@
     <style>
         html {
             background-color: #243b55;
-             height: 100%;
+            height: 100%;
         }
         .login-box {
         position: absolute;
