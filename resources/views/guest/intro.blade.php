@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+
     <div class="footer mt-16">
         <div class="bubbles">
             <div class="bubble"
@@ -405,6 +406,4 @@
                 <div><a href="">resi</a></div>
             </div>
         </div>
-        <svg style="position:fixed; top:100vh">
-        </svg>
     @endsection
