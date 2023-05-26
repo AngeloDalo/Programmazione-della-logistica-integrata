@@ -35,6 +35,9 @@ Route::get('/guest/landing2', function () {
 Route::get('/guest/thanks', function () {
     return view('guest.thanks');
 });
+Route::get('/guest/intro', function () {
+    return view('guest.intro');
+});
 
 Auth::routes();
 
