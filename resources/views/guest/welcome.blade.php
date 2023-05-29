@@ -8,7 +8,37 @@
     <div class="flex flex-wrap items-center justify-center">
 
         @foreach ($underwears as $underwear)
-            <div class="max-w-2xl mx-auto py-2">
+            <div class="container-view max-w-2xl mx-auto py-2">
+                <div class="card-view">
+                    <div class="imgBx-view">
+                        <img src="{{ asset('storage/' . $underwear->image) }}" alt="nike-air-shoe">
+                    </div>
+
+                    <div class="contentBx-view">
+
+                        <h2>{{ $underwear->name }}</h2>
+
+                        <div class="size-view">
+                            <h3>Size :</h3>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
+
+                        <div class="color-view">
+
+                            <h3>Color :</h3>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="{{ route('admin.underwears.show', $underwear->slug) }}" class="special-button">Buy Now</a>
+                    </div>
+
+                </div>
+            </div>
+            {{-- <div class="max-w-2xl mx-auto py-2">
                 <div class="bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
                     <a href="#">
                         <img class="rounded-t-lg p-8" src="{{ asset('storage/' . $underwear->image) }}" alt="product image">
@@ -66,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         @endforeach
     </div>
     {{-- <footer class="relative bg-blueGray-200 pt-8 pb-6">

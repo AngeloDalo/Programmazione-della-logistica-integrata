@@ -202,6 +202,185 @@ body .footer .content > div .image {
   }
 }
 
+.container-view {
+    position: relative;
+}
+
+.container-view .card-view {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container-view .card-view:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1BBFE9;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.container-view .card-view:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.container-view .card-view:after {
+    content: "Led";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+
+}
+
+.container-view .card-view .imgBx-view {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.container-view .card-view:hover .imgBx-view {
+    top: 0%;
+    transform: translateY(-25%);
+    /* bug  */
+}
+
+.container-view .card-view .imgBx-view img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(20deg);
+    width: 270px;
+}
+
+.container-view .card-view .contentBx-view {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+
+.container-view .card-view:hover .contentBx-view {
+    height: 210px;
+}
+
+.container-view .card-view .contentBx-view h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.container-view .card-view .contentBx-view .size-view,
+.container-view .card-view .contentBx-view .color-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container-view .card-view:hover .contentBx-view .size-view {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+}
+
+.containe-viewr .card-view:hover .contentBx-view .color-view {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .6s;
+}
+
+.container-view .card-view .contentBx-view .size-view h3,
+.container-view .card-view .contentBx-view .color-view h3 {
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.container-view .card-view .contentBx-view .size-view span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: .5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container-view .card-view .contentBx-view .size-view span:hover {  /* other bug */
+    background: #B90000;
+}
+
+.container-view .card-view .contentBx-view .color-view span {
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.container-view .card-view .contentBx-view .color-view span:nth-child(2) {
+     background: #1BBFE9;
+}
+
+.container-view .card-view .contentBx-view .color-view span:nth-child(3) {
+     background: #1B2FE9;
+}
+
+.container-view .card-view .contentBx-view .color-view span-view:nth-child(4) {
+     background: #080481;
+}
+
+.container-view .card-view .contentBx-view a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+}
+
+.container-view .card-view:hover .contentBx-view a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .7s;
+}
         .login-box {
         position: absolute;
         top: 60%;
