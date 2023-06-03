@@ -6,13 +6,13 @@
 
 @section('content')
     <section>
-        <div class="bg-black text-white py-5">
-            <div class="container mx-auto flex flex-col md:flex-row items-center my-10 md:mt-5 md:pb-15">
-                <div class="flex flex-col w-full lg:w-1/3 justify-center items-start p-8">
+        <div class="bg-black text-white py-10">
+            <div class="container mx-auto flex flex-row md:flex-row items-center md:pb-15">
+                <div class="flex flex-col w-full lg:w-1/2 justify-center items-start p-8">
                     <h1 class="text-3xl md:text-5xl text-yellow-300 tracking-loose mb-4">Led Underwear</h1>
                     <h2 class="text-1xl md:text-3xl leading-relaxed md:leading-snug mb-2">Illumina il tuo stile
                     </h2>
-                    <p class="text-sm md:text-base text-gray-50 mb-4">trasformare l'esperienza di indossare mutande, creando un connubio tra comfort e tecnologia, ridefinire il concetto di biancheria intima, unendo comfort, stile e un tocco di originalità per trasformare l'abbigliamento intimo in un'esperienza unica e divertente</p>
+                    <p class="text-sm md:text-base text-gray-50 mb-4">Led Underwear crea un connubio tra comfort e tecnologia, ridefinire il concetto di biancheria intima, unendo comfort, stile e un tocco di originalità per trasformare l'abbigliamento intimo in un'esperienza unica e divertente</p>
                     <a href="{{ url('/') }}"
                         class="special-button">
                         Buy Now</a>
@@ -20,8 +20,7 @@
                 <div class="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3  justify-center">
                     <div class="h-48 flex flex-wrap content-center">
                         <div>
-                            <img class="inline-block mt-28 hidden xl:block"
-                                src="https://www.ideabit.com/album/foto_full/formato-immagini-webp_710.jpg">
+                            <img src="http://127.0.0.1:8000/storage/uploads/29272261-5596-440A-A29F-D6979C602B51.JPEG" class="w-60" alt="ff">
                         </div>
                     </div>
                 </div>
