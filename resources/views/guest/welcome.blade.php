@@ -20,10 +20,12 @@
 
                         <div class="size-view">
                             <h3>Size :</h3>
-                            <span>1</span>
-                            <span>2</span>
-                            <span>3</span>
-                            <span>4</span>
+                            <span>XS</span>
+                            <span>S</span>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>XL</span>
+                            <span>XXL</span>
                         </div>
 
                         <div class="color-view">

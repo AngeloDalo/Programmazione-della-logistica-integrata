@@ -641,8 +641,8 @@ body .footer .content > div .image {
             <div class="w-full bg-dark dark-mode:text-gray-200 dark-mode:bg-gray-800 text-white">
                 <div x-data="{ open: true }"
                     class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-                    <div class="flex flex-row items-center justify-between p-4">
-                        <a href="{{ url('/guest/intro') }}"><img src="http://127.0.0.1:8000/storage/uploads/Logo.png" class="w-60" alt="ff"></a>
+                    <div class="flex flex-row items-center justify-between">
+                        <a href="{{ url('/guest/intro') }}"><img src="http://127.0.0.1:8000/storage/uploads/Logo.png" class="w-40" alt="ff"></a>
                         <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
                             @click="open = !open">
                             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
