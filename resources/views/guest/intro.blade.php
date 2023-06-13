@@ -9,10 +9,10 @@
         <div class="bg-black text-white py-10">
             <div class="container mx-auto flex flex-row md:flex-row items-center md:pb-15">
                 <div class="flex flex-col w-full lg:w-1/2 justify-center items-start p-8">
-                    <h1 class="text-3xl md:text-5xl text-yellow-300 tracking-loose mb-4">Led Underwear</h1>
+                    <h1 class="text-3xl md:text-5xl text-yellow-300 tracking-loose mb-4">UnderLed</h1>
                     <h2 class="text-1xl md:text-3xl leading-relaxed md:leading-snug mb-2">Illumina il tuo stile
                     </h2>
-                    <p class="text-sm md:text-base text-gray-50 mb-4">Led Underwear crea un connubio tra comfort e tecnologia, ridefinire il concetto di biancheria intima, unendo comfort, stile e un tocco di originalità per trasformare l'abbigliamento intimo in un'esperienza unica e divertente</p>
+                    <p class="text-sm md:text-base text-gray-50 mb-4">UnerLed crea un connubio tra comfort e tecnologia, ridefinire il concetto di biancheria intima, unendo comfort, stile e un tocco di originalità per trasformare l'abbigliamento intimo in un'esperienza unica e divertente</p>
                     <a href="{{ url('/') }}"
                         class="special-button">
                         Buy Now</a>
