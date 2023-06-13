@@ -58,7 +58,7 @@
     <script defer src="https://unpkg.com/alpinejs@3.2.2/dist/cdn.min.js"></script>
     <style>
         html {
-            background-color: #243b55;
+            background-color: #1246FF;
             height: 100%;
         }
         body {
@@ -66,7 +66,7 @@
 }
         body .footer {
   z-index: 1;
-  --footer-background:#ED5565;
+  --footer-background:#E506AF;
   display: grid;
   position: relative;
   grid-area: footer;
@@ -449,7 +449,7 @@ body .footer .content > div .image {
         letter-spacing: 4px
         }
         .special-button{
-            background-color:#243b55;
+            background-color:#1246FF;
         display: inline-block;
         padding: 10px 20px;
         color: #03e9f4;
@@ -642,7 +642,7 @@ body .footer .content > div .image {
                 <div x-data="{ open: true }"
                     class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                     <div class="flex flex-row items-center justify-between p-4">
-                        <a href="{{ url('/guest/intro') }}"><img src="http://127.0.0.1:8000/storage/uploads/zyro-image.png" class="w-60" alt="ff"></a>
+                        <a href="{{ url('/guest/intro') }}"><img src="http://127.0.0.1:8000/storage/uploads/Logo.png" class="w-60" alt="ff"></a>
                         <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
                             @click="open = !open">
                             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
