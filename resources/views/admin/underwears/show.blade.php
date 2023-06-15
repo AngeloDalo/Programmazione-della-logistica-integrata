@@ -13,7 +13,7 @@
                     <div class="flex">
                         <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
                             <div class="flex items-center border-gray-100">
-                                <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold">Quantity
+                                <label for="custom-input-number" class="w-full text-gray-700 text-sm font-semibold">Quantitò
                                 </label>
                                 <button data-action="decrement" id="decrement"
                                     class="special-button">
@@ -28,11 +28,12 @@
                             </div>
                             <select id="size"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option selected>Choose a size</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
+                                <option selected>Seleziona la taglia</option>
+                                <option value="1">XS</option>
+                                <option value="2">S</option>
+                                <option value="3">M</option>
+                                <option value="4">L</option>
+                                <option value="4">XL</option>
                             </select>
                             <div class="flex items-center space-x-4">
                                 <input type="button" id="price" value="{{ $underwear->price }}" />
@@ -45,16 +46,16 @@
             <!-- Sub total -->
             <div class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
                 <div class="mb-2 flex justify-between">
-                    <p class="text-gray-700">Subtotal</p>
+                    <p class="text-gray-700">Totale Parziale:</p>
                     <p class="text-gray-700" id="subtotal"></p>
                 </div>
                 <div class="flex justify-between">
-                    <p class="text-gray-700">Shipping</p>
-                    <p class="text-gray-700">4.99€</p>
+                    <p class="text-gray-700">Spedizione</p>
+                    <p class="text-gray-700">free</p>
                 </div>
                 <hr class="my-4" />
                 <div class="flex justify-between mb-2">
-                    <span class="text-lg font-bold">Total</span>
+                    <span class="text-lg font-bold">Totale</span>
                     <div class="flex justify-between" id="total">
                         <div class="">
                             <p class="mb-1 text-lg font-bold"></p>
@@ -204,11 +205,10 @@
             <div class="container-footer mt-13">
                 <i class="fa fa-instagram" id="instagram"></i>
                 <i class="fa fa-twitter" id="twitter"></i>
-                <i class="fa fa-facebook-square" id="facebook"></i>
             </div>
             <div class="flex flex-col px-10 mt-9">
                 <div><a href="">policy</a></div>
-                <div><a href="">chi siamo</a></div>
+                <div><a href="{{ url('/guest/landing') }}">chi siamo</a></div>
                 <div><a href="">contattaci</a></div>
                 <div><a href="">resi</a></div>
             </div>

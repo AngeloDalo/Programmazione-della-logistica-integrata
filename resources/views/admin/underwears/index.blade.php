@@ -6,19 +6,16 @@
             <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
                 <tr>
                     <th class="p-2 whitespace-nowrap">
-                        <div class="font-semibold text-left">Name</div>
+                        <div class="font-semibold text-left">Nome</div>
                     </th>
                     <th class="p-2 whitespace-nowrap">
-                        <div class="font-semibold text-left">Price</div>
+                        <div class="font-semibold text-left">Prezzo</div>
                     </th>
                     <th class="p-2 whitespace-nowrap">
-                        <div class="font-semibold text-left">Quantity</div>
+                        <div class="font-semibold text-left">Quantità</div>
                     </th>
                     <th class="p-2 whitespace-nowrap">
-                        <div class="font-semibold text-center">Size</div>
-                    </th>
-                    <th class="p-2 whitespace-nowrap">
-                        <div class="font-semibold text-center">Update</div>
+                        <div class="font-semibold text-center">Modifica</div>
                     </th>
                 </tr>
             </thead>
@@ -40,11 +37,8 @@
                             <div class="text-left text-center">{{ $underwear->quantity }}</div>
                         </td>
                         <td class="p-2 whitespace-nowrap">
-                            <div class="text-lg text-center">{{ $underwear->size }}</div>
-                        </td>
-                        <td class="p-2 whitespace-nowrap">
-                            <div class="text-lg text-center"><a class="btn btn-danger text-dark"
-                                    href="{{ route('admin.underwears.edit', $underwear->slug) }}">Edit</a></div>
+                            <div class="text-lg text-center"><a class="btn btn-primary"
+                                    href="{{ route('admin.underwears.edit', $underwear->slug) }}">Modifica</a></div>
                         </td>
                     </tr>
                 @endforeach

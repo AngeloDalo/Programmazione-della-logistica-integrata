@@ -99,7 +99,7 @@
     </section>
 
 
-    <section class="relative pt-16 bg-blueGray-50">
+    <section class="relative pt-16 bg-blueGray-50 pb-10">
         <div class="container mx-auto">
             <div class="flex flex-wrap items-center">
                 <div class="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-78">
@@ -180,7 +180,7 @@
         </div>
     </section>
 
-    <div class="w-full bg-gray-800">
+    {{-- <div class="w-full bg-gray-800">
         <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
             <div class="text-center pb-12">
                 <h2 class="text-base font-bold text-indigo-600">
@@ -270,7 +270,7 @@
                 </div>
             </div>
         </section>
-    </div>
+    </div> --}}
     {{-- <footer class="relative bg-blueGray-200 pt-8 pb-6">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap text-left lg:text-left">
@@ -752,11 +752,10 @@
             <div class="container-footer mt-13">
                 <i class="fa fa-instagram" id="instagram"></i>
                 <i class="fa fa-twitter" id="twitter"></i>
-                <i class="fa fa-facebook-square" id="facebook"></i>
             </div>
             <div class="flex flex-col px-10 mt-9">
                 <div><a href="">policy</a></div>
-                <div><a href="">chi siamo</a></div>
+                <div><a href="{{ url('/guest/landing') }}">chi siamo</a></div>
                 <div><a href="">contattaci</a></div>
                 <div><a href="">resi</a></div>
             </div>

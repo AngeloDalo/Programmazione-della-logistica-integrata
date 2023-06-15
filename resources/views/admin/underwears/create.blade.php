@@ -128,7 +128,7 @@
                                 <div class="mb-1">
                                     {{-- <label for="name" class="form-label text-uppercase fw-bold">Name</label>
                             <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}"> --}}
-                                    <label for="name" class="font-bold mb-1 text-gray-700 block">Name</label>
+                                    <label for="name" class="font-bold mb-1 text-gray-700 block">Nome</label>
                                     <input type="text"
                                         class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
                                         placeholder="Enter your name..." id="name" name="name"
@@ -142,7 +142,7 @@
                                 <div class="mb-1">
                                     {{-- <label for="price" class="form-label text-uppercase fw-bold">Price</label>
                             <input type="text" class="form-control" id="price" name="price" value="{{ old('price') }}"> --}}
-                                    <label for="price" class="font-bold mb-1 text-gray-700 block">Price</label>
+                                    <label for="price" class="font-bold mb-1 text-gray-700 block">Prezzo</label>
                                     <input type="text"
                                         class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
                                         placeholder="Enter the price..." id="price" name="price"
@@ -156,7 +156,7 @@
                                 <div class="mb-1">
                                     {{-- <label for="quantity" class="form-label text-uppercase fw-bold">Quantity</label>
                             <input type="text" class="form-control" id="quantity" name="quantity" value="{{ old('quantity') }}"> --}}
-                                    <label for="quantity" class="font-bold mb-1 text-gray-700 block">Quantity</label>
+                                    <label for="quantity" class="font-bold mb-1 text-gray-700 block">Quantità</label>
                                     <input type="text"
                                         class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
                                         placeholder="Enter the quantity..." id="quantity" name="quantity"
@@ -170,7 +170,7 @@
                                 <div class="mb-1">
                                     {{-- <label for="size" class="form-label text-uppercase fw-bold">Size</label>
                             <input type="text" class="form-control" id="size" name="size" value="{{ old('size') }}"> --}}
-                                    <label for="size" class="font-bold mb-1 text-gray-700 block">Size</label>
+                                    <label for="size" class="font-bold mb-1 text-gray-700 block">Taglia</label>
                                     <input type="text"
                                         class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
                                         placeholder="Enter the size..." id="size" name="size"
@@ -187,19 +187,19 @@
                                             <input class="form-check-input" type="radio" name="visible" id="available"
                                                 value="1" checked>
                                             <label class="form-check-label" for="available">
-                                                Available
+                                                Disponibile
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="visible" id="notAvailable"
                                                 value="0">
                                             <label class="form-check-label" for="notAvailable">
-                                                Not Available
+                                                Non Disponibile
                                             </label>
                                         </div>
                                     </div>
                                     <button type="button" class="w-32 focus:outline-none border border-transparent py-2 px-5 rounded-lg shadow-sm text-center text-white bg-blue-500 hover:bg-blue-600 font-medium" onclick="validationForm()"
-                                    value="Submit form">Save</button>
+                                    value="Submit form">Salva</button>
                                 </div>
                             </form>
                         </div>

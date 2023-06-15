@@ -180,20 +180,20 @@
                                             <input class="form-check-input" type="radio" name="visible" id="visible"
                                                 value="1" {{ $underwear->visible == true ? 'checked' : '' }}>
                                             <label class="form-check-label" for="visible">
-                                                Available
+                                                Disponibile
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="visible" id="notVisible"
                                                 value="0" {{ $underwear->visible == false ? 'checked' : '' }}>
                                             <label class="form-check-label" for="notVisible">
-                                                Not Available
+                                                Non disponibile
                                             </label>
                                         </div>
                                     </div>
                                     <button type="button"
                                         class="btn btn-danger text-dark w-32 focus:outline-none border border-transparent py-2 px-5 rounded-lg shadow-sm text-center text-white bg-blue-500 hover:bg-blue-600 font-medium"
-                                        onclick="validationForm()" value="Submit form">Save</button>
+                                        onclick="validationForm()" value="Submit form">Salva</button>
                                 </div>
                             </form>
                         </div>

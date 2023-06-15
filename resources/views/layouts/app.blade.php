@@ -10,6 +10,7 @@
     <title>MyUnderwear</title>
     <!-- Gogole Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/x-icon" href="http://127.0.0.1:8000/storage/uploads/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap"
         rel="stylesheet" />
@@ -884,18 +885,18 @@ body .footer .content > div .image {
     var button1 = document.getElementById("decrement");
     var button2 = document.getElementById("increment");
     var price = document.getElementById("price").value;
-    var total = document.getElementById("total").innerHTML = (price * quantity + 4.99).toFixed(2) + "€";
+    var total = document.getElementById("total").innerHTML = (price * quantity + 0).toFixed(2) + "€";
     var subtotal = document.getElementById("subtotal").innerHTML = (price * quantity).toFixed(2) + "€";
 
     button1.addEventListener('click', function() {
         quantity = quantity - 1;
-        document.getElementById("total").innerHTML = (price * quantity + 4.99).toFixed(2) + "€";
+        document.getElementById("total").innerHTML = (price * quantity + 0).toFixed(2) + "€";
         document.getElementById("subtotal").innerHTML = (price * quantity).toFixed(2) + "€";
     });
     button2.addEventListener('click', function() {
         quantity = quantity + 1;
         console.log(quantity);
-        document.getElementById("total").innerHTML = (price * quantity + 4.99).toFixed(2) + "€";
+        document.getElementById("total").innerHTML = (price * quantity + 0).toFixed(2) + "€";
         document.getElementById("subtotal").innerHTML = (price * quantity).toFixed(2) + "€";
     });
 </script>

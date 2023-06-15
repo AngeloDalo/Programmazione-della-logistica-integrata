@@ -19,7 +19,7 @@
                         <h2>{{ $underwear->name }}</h2>
 
                         <div class="size-view">
-                            <h3>Size :</h3>
+                            <h3>Taglia:</h3>
                             <span>XS</span>
                             <span>S</span>
                             <span>M</span>
@@ -582,11 +582,10 @@
             <div class="container-footer mt-13">
                 <i class="fa fa-instagram" id="instagram"></i>
                 <i class="fa fa-twitter" id="twitter"></i>
-                <i class="fa fa-facebook-square" id="facebook"></i>
             </div>
             <div class="flex flex-col px-10 mt-9">
                 <div><a href="">policy</a></div>
-                <div><a href="">chi siamo</a></div>
+                <div><a href="{{ url('/guest/landing') }}">chi siamo</a></div>
                 <div><a href="">contattaci</a></div>
                 <div><a href="">resi</a></div>
             </div>

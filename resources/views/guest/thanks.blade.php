@@ -12,8 +12,8 @@
                     </svg>
                     <h1
                         class="text-4xl font-bold font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-                        Thank You !</h1>
-                    <p>Thank you for order! Check your email for the information.</p>
+                        Grazie !</h1>
+                    <p>Grazie per il tuo ordine! Riceverai una email con il riepilogo dell'ordine.</p>
                     <a href="{{ url('/') }}"
                         class="special-button">
                         <span class="text-sm font-medium">
@@ -28,7 +28,7 @@
             <div
                 class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white">
                 <div class="flex-auto p-5 lg:p-10">
-                    <h4 class="text-2xl mb-4 text-black font-semibold">Have a suggestion?</h4>
+                    <h4 class="text-2xl mb-4 text-black font-semibold">Hai un suggerimento?</h4>
                     <form id="feedbackForm" action="" method="">
                         <div class="relative w-full mb-3">
                             <label class="block uppercase text-gray-700 text-xs font-bold mb-2"
@@ -40,7 +40,7 @@
                         </div>
                         <div class="relative w-full mb-3">
                             <label class="block uppercase text-gray-700 text-xs font-bold mb-2"
-                                for="message">Message</label>
+                                for="message">Messaggio</label>
                             <textarea maxlength="300" name="feedback" id="feedback" rows="4" cols="80"
                                 class="border-0 px-3 py-3 bg-gray-300 placeholder-black text-gray-800 rounded text-sm shadow focus:outline-none w-full"
                                 placeholder="" required></textarea>
@@ -49,7 +49,7 @@
                             <a href="{{ url('/') }}"
                             class="special-button">
                             <span class="text-sm font-medium">
-                                Submit
+                                Invio
                             </span>
                         </a>
                         </div>
@@ -539,11 +539,10 @@
             <div class="container-footer mt-13">
                 <i class="fa fa-instagram" id="instagram"></i>
                 <i class="fa fa-twitter" id="twitter"></i>
-                <i class="fa fa-facebook-square" id="facebook"></i>
             </div>
             <div class="flex flex-col px-10 mt-9">
                 <div><a href="">policy</a></div>
-                <div><a href="">chi siamo</a></div>
+                <div><a href="{{ url('/guest/landing') }}">chi siamo</a></div>
                 <div><a href="">contattaci</a></div>
                 <div><a href="">resi</a></div>
             </div>
