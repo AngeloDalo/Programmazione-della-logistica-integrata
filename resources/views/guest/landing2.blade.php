@@ -225,8 +225,8 @@
     </div>
     <div class="content flex">
         <div class="container-footer mt-13">
-            <i class="fa fa-instagram" id="instagram"></i>
-            <i class="fa fa-twitter" id="twitter"></i>
+            <a href="https://www.instagram.com/underled_it/"><i class="fa fa-instagram" id="instagram"></i></a>
+            <a href="https://twitter.com/underled_it"><i class="fa fa-twitter" id="twitter"></i></a>
         </div>
         <div class="flex flex-col px-10 mt-9">
             <div><a href="">policy</a></div>

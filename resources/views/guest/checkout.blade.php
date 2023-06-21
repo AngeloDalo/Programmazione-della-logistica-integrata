@@ -19,27 +19,27 @@
                                         <circle cx="7.04807" cy="6.97256" r="2.5" id="svg_3"></circle>
                                     </g>
                                 </svg>
-                                <h1 class="inline text-2xl font-semibold leading-none text-white">Receiver</h1>
+                                <h1 class="inline text-2xl font-semibold leading-none text-white">Indirizzo</h1>
                             </div>
                             <div class="flex-none pt-2.5 pr-2.5 pl-1"></div>
                         </div>
                         <div class="px-5 pb-5">
-                            <input placeholder="Name*"
+                            <input placeholder="Nome*"
                                 class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"><input
-                                placeholder="Address*"
+                                placeholder="Indirizzo*"
                                 class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
                                 <input
                                 placeholder="Polygon address"
                                 class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
                             <div class="flex">
-                                <div class="flex-grow w-1/4 pr-2"><input placeholder="PLZ*"
+                                <div class="flex-grow w-1/4 pr-2"><input placeholder="CAP*"
                                         class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
                                 </div>
-                                <div class="flex-grow"><input placeholder="City*"
+                                <div class="flex-grow"><input placeholder="Città*"
                                         class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
                                 </div>
                             </div>
-                            <input placeholder="Number"
+                            <input placeholder="Numero di Telefono*"
                                 class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
                         </div>
                         <hr class="mt-4">
@@ -389,8 +389,8 @@
         </div>
         <div class="content flex">
             <div class="container-footer mt-13">
-                <i class="fa fa-instagram" id="instagram"></i>
-                <i class="fa fa-twitter" id="twitter"></i>
+                <a href="https://www.instagram.com/underled_it/"><i class="fa fa-instagram" id="instagram"></i></a>
+                <a href="https://twitter.com/underled_it"><i class="fa fa-twitter" id="twitter"></i></a>
             </div>
             <div class="flex flex-col px-10 mt-9">
                 <div><a href="">policy</a></div>
